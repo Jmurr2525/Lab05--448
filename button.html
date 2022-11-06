@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Exercise 1</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<p>Exercise 1.</p>
+<form name = "form1">
+    <label for="password">Password:</label>
+    <input type="password" id="pwd" name="pwd"><br><br>
+    <label for="pwd">Confirm Password:</label>
+    <input type="password" id="pswd" name="pswd" ><br><br>
+
+    <button type = "submit" onclick="verifyPassword()">Validate</button> 
+  </form>
+
+  <script>
+    function verifyPassword()
+    {
+        var pw = document.getElementById("pwd").value
+        var pw2 = document.getElementById("pswd").value
+
+        if(pw.length < 8 || pw2.length < 8)
+        {
+            alert("Password's must be at least 8 characters long")
+            exit
+        }
+        
+        
+        if(pw != pw2){
+            alert("Password's don't match")
+        }
+        else{
+            alert("Good Job!")
+        }
+    }
+
+  </script>
+
+</body>
+</html>
